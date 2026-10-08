@@ -1,0 +1,36 @@
+{
+  "name": "whatsapp-self-learning-bot",
+  "version": "12.0.0",
+  "description": "Adaptive WhatsApp AI agent with current-message-first generation, style-only personalization, per-contact memory, voice AI, model failover and observability.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "debug": "node bot.js --debug",
+    "relink": "node -e \"require('fs').rmSync('auth',{recursive:true,force:true})\" && node bot.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "whatsapp",
+    "chatbot",
+    "baileys",
+    "groq",
+    "llm",
+    "auto-reply",
+    "self-learning"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "6.7.24",
+    "axios": "^1.7.0",
+    "libsignal": "https://codeload.github.com/whiskeysockets/libsignal-node/tar.gz/bcea72df9ec34d9d9140ab30619cf479c7c144c7",
+    "pino": "^9.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "ws": "^8.18.0"
+  },
+  "overrides": {
+    "libsignal": "$libsignal"
+  }
+}
